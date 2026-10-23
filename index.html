@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eng. Marwan Wagih | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio website for Eng. Marwan Wagih, showcasing engineering expertise, projects, and professional experience."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+    <div class="bg-grid"></div>
+    <canvas id="equationCanvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">MW</div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn btn-primary" href="#contact">Hire Me</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow" id="eyebrowText">Engineer • Consultant • Problem Solver</p>
+            <h1 id="portfolioName">Eng. Marwan Wagih</h1>
+            <p class="lead" id="aboutText">
+              Delivering practical engineering solutions with a focus on quality,
+              reliability, and successful project execution.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn btn-secondary" href="#contact">Let's Talk</a>
+            </div>
+            <ul class="quick-stats" aria-label="Professional highlights">
+              <li><strong>8+</strong><span>Years Experience</span></li>
+              <li><strong>25+</strong><span>Projects Delivered</span></li>
+              <li><strong>100%</strong><span>Client Focus</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-card reveal" aria-label="Profile summary card">
+            <div class="avatar-ring">
+              <div class="avatar" id="profileAvatar">MW</div>
+            </div>
+            <div class="profile-card">
+              <span class="label">Specialization</span>
+              <h3>Engineering & Project Delivery</h3>
+              <ul>
+                <li>Design & Technical Planning</li>
+                <li>Site Execution & Supervision</li>
+                <li>Quality & Performance Optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container section-grid">
+          <div class="reveal">
+            <p class="section-tag">About Me</p>
+            <h2>Engineering excellence built on discipline and detail.</h2>
+          </div>
+          <div class="reveal">
+            <p id="aboutTextBlock">
+              I am Eng. Marwan Wagih, an engineering professional passionate about
+              turning technical challenges into efficient, sustainable, and
+              high-performing solutions. My work combines strategic planning,
+              engineering knowledge, and hands-on execution to deliver meaningful
+              results across complex projects.
+            </p>
+            <p>
+              From concept development to final implementation, I focus on
+              reliability, safety, and continuous improvement to help teams and
+              clients achieve their goals with confidence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section alt-bg">
+        <div class="container">
+          <p class="section-tag">Experience</p>
+          <h2>Professional strengths</h2>
+          <div class="cards three-up">
+            <article class="info-card reveal">
+              <div class="icon">01</div>
+              <h3>Technical Design</h3>
+              <p>
+                Developing practical engineering solutions grounded in analysis,
+                efficiency, and long-term value.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <div class="icon">02</div>
+              <h3>Project Management</h3>
+              <p>
+                Coordinating schedules, resources, and stakeholders to ensure smooth
+                execution and delivery.
+              </p>
+            </article>
+            <article class="info-card reveal">
+              <div class="icon">03</div>
+              <h3>Site Supervision</h3>
+              <p>
+                Monitoring implementation, ensuring compliance, quality control, and
+                performance standards.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <p class="section-tag">Featured Work</p>
+          <h2>Selected project highlights</h2>
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <span class="project-year">2024</span>
+              <h3>Commercial Building Upgrade</h3>
+              <p>
+                Improved structural and systems performance while enhancing energy
+                efficiency and reducing maintenance issues.
+              </p>
+            </article>
+            <article class="project-card reveal">
+              <span class="project-year">2023</span>
+              <h3>Infrastructure Improvement Plan</h3>
+              <p>
+                Planned and supervised upgrades to support long-term operational
+                continuity and reliability.
+              </p>
+            </article>
+            <article class="project-card reveal">
+              <span class="project-year">2022</span>
+              <h3>Industrial Facility Support</h3>
+              <p>
+                Managed technical coordination and execution support to improve
+                productivity and system stability.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section metrics-section alt-bg">
+        <div class="container metrics-grid">
+          <div>
+            <strong>8+</strong>
+            <span>Years in engineering practice</span>
+          </div>
+          <div>
+            <strong>25+</strong>
+            <span>Completed engineering initiatives</span>
+          </div>
+          <div>
+            <strong>12</strong>
+            <span>Cross-functional project collaborations</span>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <span>Professional commitment to results</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container contact-box reveal">
+          <div>
+            <p class="section-tag">Contact</p>
+            <h2>Let’s discuss your next engineering challenge.</h2>
+          </div>
+          <div class="contact-actions">
+            <a id="whatsappLink" class="btn btn-primary" href="https://wa.me/01221219132" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a id="phoneLink" class="btn btn-secondary" href="tel:+9661221219132">Call Now</a>
+          </div>
+        </div>
+
+        <div class="container social-section reveal">
+          <p class="section-tag center">Follow & Connect</p>
+          <div class="social-links">
+            <a id="linkedinLink" class="social-link" href="https://www.linkedin.com/in/marwanwagih" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a id="instagramLink" class="social-link" href="https://www.instagram.com/marwan__wagih" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a id="facebookLink" class="social-link" href="https://www.facebook.com/share/19i6qM7xoE/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a id="githubLink" class="social-link" href="https://github.com/marwanwagih" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> <span id="footerName">Eng. Marwan Wagih</span>. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="math-space.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
