@@ -52,8 +52,6 @@ function applyState() {
       .toUpperCase();
     avatar.style.backgroundImage = '';
   }
-
-  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -65,22 +63,32 @@ document.addEventListener('DOMContentLoaded', () => {
   applyState();
 
   const revealItems = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+  const observer = 'IntersectionObserver' in window
+    ? new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05 }
+    )
+    : null;
 
   revealItems.forEach((item, index) => {
     item.style.setProperty('--reveal-delay', `${(index % 4) * 90}ms`);
-    observer.observe(item);
+    const bounds = item.getBoundingClientRect();
+    if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+      item.classList.add('visible');
+    } else if (observer) {
+      observer.observe(item);
+    } else {
+      item.classList.add('visible');
+    }
   });
+  document.documentElement.classList.add('reveal-ready');
 
   const parallaxElements = document.querySelectorAll('.bg-orb');
 
